@@ -39,22 +39,30 @@ body {
 /* Sidebar Toggle Button */
 .toggle-btn {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: #f0f0f0; /* Light Gray */
-    color: #333; /* Dark Gray */
+    top: 15px; /* Adjusted for better alignment */
+    left: 15px;
+    background: none; /* Removes background */
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    z-index: 600; /* Ensure it's above the sidebar */
+    outline: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 28px; /* Larger icon */
+    color: #ffffff; /* White icon */
+    z-index: 600; /* Ensure it's above other elements */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hover Effect */
 .toggle-btn:hover {
-    background-color: #dcdcdc; /* Slightly darker gray */
-    color: #000; /* Black text */
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 0.8; /* Slight fade effect */
+}
+
+/* Active State (Rotates Icon) */
+.toggle-btn.active {
+    transform: rotate(90deg);
 }
 
 .my-name {
