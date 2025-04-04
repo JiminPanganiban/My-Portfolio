@@ -1,19 +1,27 @@
 // sidebar toggle code
-document.getElementById('sidebar-toggle').addEventListener('click', function() {
+function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     const sections = document.querySelectorAll('section');
 
     // Toggle sidebar visibility
-    sidebar.classList.toggle('hide');
+    sidebar.classList.toggle('show'); // Toggle 'show' class
+    sidebar.classList.toggle('hide'); // Remove this if you are merging the functionality.
 
     // Toggle sections' margin
     sections.forEach(section => {
         section.classList.toggle('shift');
     });
-});
 
+    // Prevent body scroll when the sidebar is open
+    document.body.classList.toggle('sidebar-open');
+}
+
+// Event listeners for both buttons
+document.getElementById('mobile-sidebar-toggle').addEventListener('click', toggleSidebar);
+document.getElementById('desktop-sidebar-toggle').addEventListener('click', toggleSidebar);
 
        
+
        // Smooth scrolling to sections
         const menuLinks = document.querySelectorAll('.list a');
 
