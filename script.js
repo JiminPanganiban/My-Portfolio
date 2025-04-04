@@ -1,4 +1,4 @@
-// sidebar toggle code
+// desktop sidebar toggle code
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     const sections = document.querySelectorAll('section');
@@ -11,16 +11,29 @@ function toggleSidebar() {
     sections.forEach(section => {
         section.classList.toggle('shift');
     });
-
-    // Prevent body scroll when the sidebar is open
-    document.body.classList.toggle('sidebar-open');
 }
 
 // Event listeners for both buttons
-document.getElementById('mobile-sidebar-toggle').addEventListener('click', toggleSidebar);
 document.getElementById('desktop-sidebar-toggle').addEventListener('click', toggleSidebar);
 
+
+
+
+//mobile sidebar toggle code
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.getElementById("sidebar");
+    const mobileToggle = document.getElementById("mobile-sidebar-toggle");
+
+    if (mobileToggle && sidebar) {
+        mobileToggle.addEventListener("click", function () {
+            sidebar.classList.toggle("show");
+            this.classList.toggle("active");
+        });
+    }
+});
        
+
 
        // Smooth scrolling to sections
         const menuLinks = document.querySelectorAll('.list a');
@@ -85,7 +98,7 @@ document.getElementById('desktop-sidebar-toggle').addEventListener('click', togg
 
 
 // for name typewriter in home
-const textArray = ["Information Technology", "Graphic Design", "Web Development", "UI/UX Design"];
+const textArray = ["IT Student", "Fresh Graduate", "Graphic Design", "Web Development"];
 let textIndex = 0;
 let charIndex = 0;
 const typingSpeed = 100;

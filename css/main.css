@@ -322,7 +322,7 @@ section.shift {
     /* height: 2160px !important; */
     min-height: 100vh;
     /* /* background: #030e1d;  */
-    background: url('img/starry-bg.jpg');
+    background: url('../img/starry-bg.jpg');
     color: white;
     padding: 50px;
     flex-direction: column;
