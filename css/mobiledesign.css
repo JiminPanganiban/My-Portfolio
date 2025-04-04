@@ -1,0 +1,58 @@
+/* Mobile Design */
+@media (max-width: 768px) {
+    /* Sidebar */
+    .menu {
+        transform: translateX(-100%); /* Hide sidebar by default */
+    }
+
+    /* Show sidebar when active */
+    .menu.show {
+        transform: translateX(0); /* Show sidebar */
+    }
+
+    /* Sidebar Toggle Button */
+    .toggle-btn {
+        display: flex; /* Make sure the button is visible */
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 600; /* Above other elements */
+    }
+
+    /* Sections */
+    section {
+        margin-left: 0; /* No margin to the left */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    /* Home Section */
+    #Home {
+        height: 600px !important; /* Adjust height for mobile */
+        padding: 10px; /* Adjust padding */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        justify-content: center; /* Center vertically */
+    }
+
+    /* Hide social links in mobile view */
+    .social-links {
+        display: none; /* Hide social links */
+    }
+
+    /* Adjust profile image size */
+    .profile-img img {
+        width: 80px; /* Smaller profile image */
+        height: 80px;
+    }
+
+    /* Adjust name font size */
+    .my-name {
+        font-size: 20px; /* Smaller name font size */
+    }
+
+    /* Adjust sidebar navigation links */
+    .list a {
+        font-size: 16px; /* Smaller font size for links */
+        padding: 8px; /* Adjust padding */
+    }
+}

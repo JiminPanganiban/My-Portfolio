@@ -1,12 +1,14 @@
 // sidebar toggle code
-document.addEventListener("DOMContentLoaded", function () {
-    const sidebar = document.getElementById("sidebar");
-    const toggleBtn = document.getElementById("sidebar-toggle");
-    const body = document.body;
+document.getElementById('sidebar-toggle').addEventListener('click', function() {
+    const sidebar = document.getElementById('sidebar');
+    const sections = document.querySelectorAll('section');
 
-    toggleBtn.addEventListener("click", function () {
-        sidebar.classList.toggle("active"); // Show/hide sidebar
-        body.classList.toggle("active"); // Push content
+    // Toggle sidebar visibility
+    sidebar.classList.toggle('hide');
+
+    // Toggle sections' margin
+    sections.forEach(section => {
+        section.classList.toggle('shift');
     });
 });
 
