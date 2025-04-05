@@ -10,6 +10,7 @@
         transition: left 0.3s ease-in-out !important;
         box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5) !important;
         padding-top: 80px !important;
+        font-size: 16px !important;
     }
 
     .menu.show {
@@ -280,11 +281,11 @@
     }
 
     .education-title {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .education-title-line {
-        width: 80px;
+        width: 70px;
         height: 3px;
         margin-bottom: 30px;
     }
@@ -292,64 +293,74 @@
     .timeline {
         padding: 20px 0;
     }
-
+    
+    /* Remove the central line on mobile */
     .timeline::after {
-        left: 8px; /* Move line to the left for vertical layout */
+        display: none;
     }
-
+    
+    /* Stack all containers vertically */
     .timeline-container {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 40px 0;
-        min-height: unset;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+        min-height: auto;
     }
-
-    .timeline-container.left,
-    .timeline-container.right {
-        justify-content: flex-start;
-    }
-
+    
+    /* Full width for items on mobile */
     .timeline-item {
-        width: 100%;
-        margin-left: 30px; /* Push cards away from the timeline line */
+        width: 90%;
+        margin: 0 auto;
+        order: 2; /* Content comes after year */
     }
-
+    
     .timeline-year {
-        position: static;
-        transform: none;
-        margin-bottom: 10px;
-        margin-left: 30px;
-        font-size: 1rem;
+        position: relative !important;
+        top: auto !important;
+        left: 0 !important;
+        right: auto !important;
+        transform: none !important;
+        margin: 15px 0 15px 20px !important; /* Top Right Bottom Left */
+        padding: 10px 18px !important;
+        order: 1 !important;
+        text-align: left !important;
+        align-self: flex-start !important;
+        width: fit-content !important;
+        display: block !important;
+        float: none !important;
+        clear: both !important;
+        font-size: 19px;
     }
-
-    .timeline-marker {
-        position: absolute;
-        left: 0;
-        top: 40px;
-        transform: none;
+    
+    .graduation-cap {
+        display: none;
     }
-
+    
+    /* Content card adjustments */
     .content {
         border-radius: 20px !important;
-        padding: 20px;
+        padding: 25px 15px;
     }
-
+    
+    /* Remove arrows on mobile */
     .content::before {
-        display: none; /* Hide arrows on mobile */
+        display: none;
     }
-
+    
+    /* Adjust logo size */
     .school-logo {
         width: 70px;
         height: 70px;
-        margin-bottom: 10px;
     }
-
+    
+    /* Text adjustments */
     .content h2 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
-
+    
     .content p {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
     }
 }
 
