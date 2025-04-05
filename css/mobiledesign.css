@@ -271,6 +271,86 @@
         font-size: 18px;
         margin-top: 40px;
     }
+
+    
+    /* EDUCATION SECTION */
+
+    #Education {
+        padding: 60px 15px;
+    }
+
+    .education-title {
+        font-size: 32px;
+    }
+
+    .education-title-line {
+        width: 80px;
+        height: 3px;
+        margin-bottom: 30px;
+    }
+
+    .timeline {
+        padding: 20px 0;
+    }
+
+    .timeline::after {
+        left: 8px; /* Move line to the left for vertical layout */
+    }
+
+    .timeline-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 0;
+        min-height: unset;
+    }
+
+    .timeline-container.left,
+    .timeline-container.right {
+        justify-content: flex-start;
+    }
+
+    .timeline-item {
+        width: 100%;
+        margin-left: 30px; /* Push cards away from the timeline line */
+    }
+
+    .timeline-year {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+        margin-left: 30px;
+        font-size: 1rem;
+    }
+
+    .timeline-marker {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        transform: none;
+    }
+
+    .content {
+        border-radius: 20px !important;
+        padding: 20px;
+    }
+
+    .content::before {
+        display: none; /* Hide arrows on mobile */
+    }
+
+    .school-logo {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    .content h2 {
+        font-size: 1.2rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
 }
 
 
