@@ -163,3 +163,20 @@ document.getElementById('servicesBtn').addEventListener('click', function() {
     this.classList.add('active');
     document.getElementById('toolsBtn').classList.remove('active');
 });
+
+
+
+// STARS BACKGROUND SCRIPT
+const starContainer = document.getElementById('stars');
+    const starCount = 50; // Number of stars
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 3 + 1; // Random size between 1px and 4px
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      star.style.top = `${Math.random() * 100}%`; // Random top position
+      star.style.left = `${Math.random() * 100}%`; // Random left position
+      starContainer.appendChild(star);
+    }
