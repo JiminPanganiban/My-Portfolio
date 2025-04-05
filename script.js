@@ -166,7 +166,7 @@ document.getElementById('servicesBtn').addEventListener('click', function() {
 
 // STARS BACKGROUND SCRIPT ON EDUCATION SECTION
 const starContainer = document.getElementById('stars');
-    const starCount = 40; // Number of stars
+    const starCount = 120; // Number of stars
 
     for (let i = 0; i < starCount; i++) {
       const star = document.createElement('div');
@@ -179,19 +179,3 @@ const starContainer = document.getElementById('stars');
       starContainer.appendChild(star);
     }
 
-
-
-// FOR THE MOVING FLAG ON EDUCATION SECTION
-const flag = document.getElementById('moving-flag');
-  const items = document.querySelectorAll('.timeline-item');
-
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const rect = item.getBoundingClientRect();
-      const scrollTop = window.scrollY || window.pageYOffset;
-      const centerY = rect.top + scrollTop + rect.height / 2;
-
-      const timelineTop = document.querySelector('.timeline').offsetTop;
-      flag.style.top = `${centerY - timelineTop - 20}px`;
-    });
-  });
