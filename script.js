@@ -179,3 +179,43 @@ const starContainer = document.getElementById('stars');
       starContainer.appendChild(star);
     }
 
+
+
+
+
+
+
+
+// Form submission handling in Contacts
+// this will send to my email
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    
+    // Change button text to loading state
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    submitBtn.disabled = true;
+    
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        alert('Message sent successfully!');
+        form.reset();
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    }).catch(error => {
+      alert('There was a problem sending your message. Please try again.');
+    }).finally(() => {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    });
+  });
+  
