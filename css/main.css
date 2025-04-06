@@ -163,7 +163,7 @@ section {
 }
 
 section.shift {
-    margin-left: 0; /* Move sections to full width */
+    margin-left: 0 !important; /* Move sections to full width */
 }
 
 
@@ -1121,20 +1121,37 @@ section.shift {
 .footer {
     background-color: #172a45;
     color: #e6f1ff;
-    padding: 20px 0;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    margin-left: 300px; /* Desktop only */
-    height: 80px !important;
-    min-height: 100px !important;
+    font-size: 16px;
+    margin-left: 300px !important;
+        min-height: auto !important;
+        max-height: 80px;
+        height: auto;
+        padding: 20px 15px;
 }
 
 .footer .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
 }
+
+.footer .footer-icons {
+    margin-top: 10px;
+}
+
+.footer .footer-icons a {
+    margin: 0 10px;
+    color: #e6f1ff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer .footer-icons a:hover {
+    color: #64ffda;
+}
+
 
 
 

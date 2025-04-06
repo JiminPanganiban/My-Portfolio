@@ -419,32 +419,30 @@
     .contact-form .form-group input,
     .contact-form .form-group textarea {
       padding: 12px 12px 12px 40px;
-      font-size: 0.9rem;
+      font-size: 18px;
     }
     
     .contact-form .form-group i {
-      font-size: 1rem;
+      font-size: 18px;
       top: 12px;
     }
     
     .contact-form .submit-btn {
       padding: 12px 20px;
-      font-size: 0.9rem;
+      font-size: 18px;
     }
 
 
 
 
     /* FOOTER SECTION */
-    #footer {
-        max-height: 100px !important;
-    }
     .footer {
-        margin-left: 0;
-        padding: 30px 15px;
-        font-size: 16px;
-        height: 100px !important;
+        margin-left: 0 !important;
         min-height: auto !important;
+        max-height: 120px;
+        height: auto;
+        padding: 20px 15px;
+        margin-top: 0 !important;
     }
 }
   
