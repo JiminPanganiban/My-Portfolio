@@ -131,6 +131,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+// for ABOUT SECTION
+  const aboutBtn = document.getElementById('aboutBtn');
+  const interestsBtn = document.getElementById('interestsBtn');
+  const aboutContent = document.getElementById('aboutContent');
+  const interestsContent = document.getElementById('interestsContent');
+
+  aboutBtn.addEventListener('click', () => {
+    aboutBtn.classList.add('active');
+    interestsBtn.classList.remove('active');
+    aboutContent.style.display = 'flex';
+    interestsContent.style.display = 'none';
+  });
+
+  interestsBtn.addEventListener('click', () => {
+    interestsBtn.classList.add('active');
+    aboutBtn.classList.remove('active');
+    aboutContent.style.display = 'none';
+    interestsContent.style.display = 'block';
+  });
+
+
+
+
+
+
 // for changing to skills to services
 document.getElementById('toolsBtn').addEventListener('click', function() {
     document.getElementById('skillsContent').classList.remove('fade-out');
@@ -166,12 +192,12 @@ document.getElementById('servicesBtn').addEventListener('click', function() {
 
 // STARS BACKGROUND SCRIPT ON EDUCATION SECTION
 const starContainer = document.getElementById('stars');
-    const starCount = 120; // Number of stars
+    const starCount = 200; // Number of stars
 
     for (let i = 0; i < starCount; i++) {
       const star = document.createElement('div');
       star.className = 'star';
-      const size = Math.random() * 3 + 1; // Random size between 1px and 4px
+      const size = Math.random() * 1 + 1; // Random size between 1px and 3px
       star.style.width = `${size}px`;
       star.style.height = `${size}px`;
       star.style.top = `${Math.random() * 100}%`; // Random top position
