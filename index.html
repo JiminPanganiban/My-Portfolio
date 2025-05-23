@@ -18,11 +18,10 @@
     <!-- Sidebar Toggle Buttons -->
     <!-- Mobile Top Bar -->
     <div id="top-bar" class="top-bar">
-      <img src="img/joker.png" alt="Logo" class="mobile-logo" />
-      <h2 class="top-bar-title">Jimin</h2>
       <button id="mobile-sidebar-toggle" class="mobile-toggle-btn">
         <i class="fas fa-bars"></i>
       </button>
+      <h2 class="top-bar-title">Jimin</h2>
     </div>
 
     <!-- Desktop Sidebar Toggle Button -->
@@ -31,7 +30,7 @@
       <!-- or any icon you prefer -->
     </button>
 
-    <div class="menu" id="sidebar">
+    <div class="menu hide" id="sidebar">
       <div class="profile-img">
         <img src="img/profile.jpg" alt="Profile Picture" />
       </div>
@@ -66,8 +65,11 @@
         </li>
         <li>
           <a href="#Education"
-            ><i class="fas fa-graduation-cap"></i> My Academic</a
-          >
+            ><i class="fas fa-graduation-cap"></i> Education</a>
+        </li>
+        <li>
+          <a href="#Experience"
+            ><i class="fas fa-briefcase"></i> Experience</a
         </li>
         <li>
           <a href="#Projects"><i class="fas fa-folder-open"></i> Projects</a>
@@ -119,22 +121,31 @@
                   <h2 class="about-work">Information Technology Graduate</h2>
                   <p class="about-description">
                       I'm a fresh IT graduate from the Philippines. 
-                      I have a strong passion for technology and enjoy learning about web development and Graphics Design.
+                      I have a strong passion for technology and enjoy learning about Web Development, IT Support and Graphics Design.
                   </p>
                   <p class="about-details">
-                      As a beginner in this field, I am eager to improve my skills and gain real-world experience. 
+                      As a beginner in this field, I am eager to improve my skills and gain real-world experience. <br><br>
+                      Aside from my technical skills, I am also a hardworking individual who is always willing to learn and adapt to new challenges.
                   </p>
                   <p class="about-location">📍 Calaca City, Batangas, Philippines.</p>
-                  <div class="about-social-links">
-                      <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
-                      <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
-                      <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
-                      <a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
-                  </div>
               </div>
-              <div class="about-pic-container">
+              <div class="profile-flip-card" onclick="this.classList.toggle('profile-flipped')">
+              <div class="profile-flip-card-inner">
+                <!-- Front Side (Image) -->
+                <div class="profile-flip-card-front">
                   <img src="img/zxc.jpg" alt="Profile Picture">
+                </div>
+                
+                <div class="profile-flip-card-back">
+                  <h3 class="profile-flip-back-title">My Personal Interests</h3>
+                  <ul class="profile-flip-back-list">
+                    <li class="profile-flip-back-item">Playing chess</li>
+                    <li class="profile-flip-back-item">Reading Manga/Manhwa</li>
+                    <li class="profile-flip-back-item">Jogging</li>
+                  </ul>
+                </div>
               </div>
+            </div>
           </div>
       </div>
   </section>
@@ -144,9 +155,7 @@
       <div class="skills-title-line"></div>
 
       <div class="navigation">
-        <button id="toolsBtn" class="nav-button active">
-          Tools and Technologies
-        </button>
+        <button id="toolsBtn" class="nav-button active">Tools and Technologies</button>
         <button id="servicesBtn" class="nav-button">Skills</button>
       </div>
 
@@ -215,10 +224,10 @@
       </div>
 
       <div id="servicesContent" class="services-content" style="display: none">
-        <h2>What I can offer?</h2>
+        <h2>My Skills</h2>
         <ul>
           <li>1. Web Development (HTML, CSS, Javascript, PHP)</li>
-          <li>2. Graphics Design (Canva)</li>
+          <li>2. Graphics Design using Canva/Photoshop (ex. Poster,)</li>
           <li>3. Simple 3D (Blender)</li>
           <li>4. Capable in English Communication</li>
           <li>5. Hardworking and Eager to Learn</li>
@@ -232,7 +241,7 @@
         <blockquote class="footer-phrase">
           "I turn obstacles into lessons, challenges into experiences, and
           knowledge into expertise."
-          <br />- Developer
+          <br/> - Jim Godwin Panganiban
         </blockquote>
       </div>
     </section>
@@ -329,6 +338,11 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="experience" id="Experience">
+      <h1 class="experience-title">My Experience</h1>
+
     </section>
 
     <section class="" id="Projects">

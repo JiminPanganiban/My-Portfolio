@@ -4,8 +4,8 @@ function toggleSidebar() {
     const sections = document.querySelectorAll('section');
 
     // Toggle sidebar visibility
-    sidebar.classList.toggle('show'); // Toggle 'show' class
     sidebar.classList.toggle('hide'); // Remove this if you are merging the functionality.
+    sidebar.classList.toggle('show'); // Toggle 'show' class
 
     // Toggle sections' margin
     sections.forEach(section => {
@@ -130,33 +130,45 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// for changing to skills to services
+
+
+// for the skills, services and certificates
+// Show Skills
 document.getElementById('toolsBtn').addEventListener('click', function() {
+    // Show skills
     document.getElementById('skillsContent').classList.remove('fade-out');
     document.getElementById('skillsContent').classList.add('fade-in');
+
+    // Hide services and certificates
     document.getElementById('servicesContent').classList.remove('fade-in');
     document.getElementById('servicesContent').classList.add('fade-out');
-    
+
     setTimeout(() => {
         document.getElementById('skillsContent').style.display = 'grid';
         document.getElementById('servicesContent').style.display = 'none';
     }, 200);
 
+    // Button active state
     this.classList.add('active');
     document.getElementById('servicesBtn').classList.remove('active');
 });
 
+// Show Services
 document.getElementById('servicesBtn').addEventListener('click', function() {
+    // Show services
     document.getElementById('servicesContent').classList.remove('fade-out');
     document.getElementById('servicesContent').classList.add('fade-in');
+
+    // Hide skills and certificates
     document.getElementById('skillsContent').classList.remove('fade-in');
     document.getElementById('skillsContent').classList.add('fade-out');
-    
+
     setTimeout(() => {
         document.getElementById('servicesContent').style.display = 'block';
         document.getElementById('skillsContent').style.display = 'none';
     }, 200);
 
+    // Button active state
     this.classList.add('active');
     document.getElementById('toolsBtn').classList.remove('active');
 });

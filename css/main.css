@@ -45,7 +45,7 @@ body {
     border: none;
     outline: none;
     cursor: pointer;
-    font-size: 28px; /* Larger icon */
+    font-size: 33px; /* Larger icon */
     color: #ffffff; /* White icon */
     z-index: 600; /* Ensure it's above other elements */
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -156,14 +156,14 @@ body {
 
 /* SECTIONS */
 section {
-    margin-left: 300px; /* Adjusted to avoid overlapping with the sidebar */
+    margin-left: 0px; /* Adjusted to avoid overlapping with the sidebar */
     padding: 20px;
     min-height: 100vh; /* Ensures enough space for scrolling */
     transition: margin-left 0.3s ease; /* Animation for section */
 }
 
 section.shift {
-    margin-left: 0 !important; /* Move sections to full width */
+    margin-left: 300px !important; /* Move sections to full width */
 }
 
 
@@ -410,47 +410,116 @@ section.shift {
   color: white;
 }
 
-.about-social-links {
-  margin-top: 70px;
-  display: flex;
-  align-items: center !important;
-  gap: 15px;
-  margin-left: 155px;
+/* Flip Card Container */
+/* Flip Card Container - Renamed classes */
+.profile-flip-card {
+  background-color: transparent;
+  width: 1150px;
+  height: 520px;
+  perspective: 1000px;
+  cursor: pointer;
 }
 
-.social-btn {
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(135deg, #00d9ff, #ffcc00);
-  padding: 12px;
-  border-radius: 50%;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  font-size: 22px;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+.profile-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.social-btn:hover {
-  transform: scale(1.2);
-  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.5);
+/* Flip effect when clicked */
+.profile-flipped .profile-flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.about-pic-container img {
-  width: 450px;
-  height: 500px;
+.profile-flip-card-front, .profile-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   border-radius: 7%;
-  object-fit: cover;
-  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.5);
-  transition: transform 0.3s ease-in-out;
+  backface-visibility: hidden;
+  overflow: hidden;
 }
 
-.about-pic-container img:hover {
-  transform: scale(1.03);
+.profile-flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7%;
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.5);
 }
+
+.profile-flip-card-back {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  /* background: linear-gradient(135deg, #1f6feb, #ff6b6b); */
+  color: #fff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 7%;
+  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.profile-flip-card-back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.7) 100%);
+  border-radius: 7%;
+}
+
+.profile-flip-back-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.profile-flip-back-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-flip-back-item {
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.profile-flip-back-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.profile-flip-back-item::before {
+  content: '→';
+  margin-right: 10px;
+  color: #ffcc00;
+}
+
+
 .about-work {
   font-size: 28px;
   font-weight: bold;
