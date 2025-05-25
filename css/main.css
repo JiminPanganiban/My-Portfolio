@@ -18,7 +18,8 @@ body {
 
 .menu {
     width: 300px;
-    background-color: #020b16;
+    /* background-color: #020b16; */
+    background-color: #071422;
     color: white;
     height: 100%;
     position: fixed;
@@ -329,12 +330,15 @@ section.shift {
   /* height: 2160px !important; */
   min-height: 100vh;
   /* /* background: #030e1d;  */
-  background: url('../img/starry-bg.jpg');
+  /* background: url('../img/starry-bg.jpg'); */
+  background: #020b16;
+  position: relative;
   color: white;
   padding: 50px;
   flex-direction: column;
   text-align: center;
   animation: fadeIn 1s ease-in-out;
+  padding: 50px;
 }
 
 .about-container {
@@ -349,6 +353,7 @@ section.shift {
   padding: 30px;
   border-radius: 15px;
 }
+
 
 .about-title {
   font-size: 42px;
@@ -411,8 +416,7 @@ section.shift {
 }
 
 /* Flip Card Container */
-/* Flip Card Container - Renamed classes */
-.profile-flip-card {
+.picture-flip-card {
   background-color: transparent;
   width: 1150px;
   height: 520px;
@@ -420,7 +424,7 @@ section.shift {
   cursor: pointer;
 }
 
-.profile-flip-card-inner {
+.picture-flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -429,11 +433,11 @@ section.shift {
 }
 
 /* Flip effect when clicked */
-.profile-flipped .profile-flip-card-inner {
+.picture-flipped .picture-flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.profile-flip-card-front, .profile-flip-card-back {
+.picture-flip-card-front, .picture-flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -442,7 +446,7 @@ section.shift {
   overflow: hidden;
 }
 
-.profile-flip-card-front img {
+.picture-flip-card-front img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -450,9 +454,8 @@ section.shift {
   box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.5);
 }
 
-.profile-flip-card-back {
-  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-  /* background: linear-gradient(135deg, #1f6feb, #ff6b6b); */
+.picture-flip-card-back {
+  background: transparent;
   color: #fff;
   transform: rotateY(180deg);
   display: flex;
@@ -461,22 +464,22 @@ section.shift {
   align-items: center;
   padding: 10px;
   border-radius: 7%;
-  box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.5);
   text-align: center;
+  border: #3d3d3d 2px solid;
 }
 
-.profile-flip-card-back::before {
+.picture-flip-card-back::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.7) 100%);
+  /* background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.7) 100%); */
   border-radius: 7%;
 }
 
-.profile-flip-back-title {
+.picture-flip-back-title {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 30px;
@@ -486,7 +489,7 @@ section.shift {
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.profile-flip-back-list {
+.picture-flip-back-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -495,7 +498,7 @@ section.shift {
   z-index: 1;
 }
 
-.profile-flip-back-item {
+.picture-flip-back-item {
   font-size: 20px;
   margin: 20px 0;
   padding: 12px 20px;
@@ -507,18 +510,17 @@ section.shift {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.profile-flip-back-item:hover {
+.picture-flip-back-item:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-.profile-flip-back-item::before {
+.picture-flip-back-item::before {
   content: '→';
   margin-right: 10px;
   color: #ffcc00;
 }
-
 
 .about-work {
   font-size: 28px;
@@ -559,6 +561,65 @@ section.shift {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+/* Update your snow CSS */
+.snow {
+  position: absolute; /* Keep this as absolute */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0; 
+  overflow: hidden; 
+  position: absolute;
+}
+
+/* Update snowflake positioning */
+.snowflake {
+  position: absolute; /* Change from fixed to absolute */
+  top: -10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.7;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; /* <-- This makes the animation loop */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(10px) translateY(25vh) rotate(90deg);
+  }
+  50% {
+    transform: translateX(-10px) translateY(50vh) rotate(180deg);
+  }
+  75% {
+    transform: translateX(7px) translateY(75vh) rotate(270deg);
+  }
+  100% {
+    transform: translateX(0) translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+/* @keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+} */
+
 
 
 /* SKILLS SECTION */
@@ -1182,7 +1243,7 @@ section.shift {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    margin-left: 300px !important;
+    margin-left: 0px !important;
         min-height: auto !important;
         max-height: 80px;
         height: auto;

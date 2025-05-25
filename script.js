@@ -30,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
        
 
 
@@ -132,6 +134,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// for snow falling in About Section
+document.addEventListener('DOMContentLoaded', () => {
+  const snowContainer = document.getElementById('snow');
+  const aboutSection = document.getElementById('About');
+  const snowflakeCount = 100;
+
+  // Only create snow if elements exist
+  if (snowContainer && aboutSection) {
+    for (let i = 0; i < snowflakeCount; i++) {
+      const flake = document.createElement('div');
+      flake.className = 'snowflake';
+
+      const size = Math.random() * 4 + 2;
+      flake.style.width = `${size}px`;
+      flake.style.height = `${size}px`;
+
+      flake.style.left = `${Math.random() * 100}%`;
+
+      flake.style.opacity = Math.random() * 0.5 + 0.3;
+      
+      const colors = ['#ffffff', '#e0f7ff', '#f0f8ff', '#ffeefc'];
+      flake.style.background = colors[Math.floor(Math.random() * colors.length)];
+
+      const duration = Math.random() * 5 + 5;
+      const delay = Math.random() * 10;
+      flake.style.animationDuration = `${duration}s`;
+      flake.style.animationDelay = `${delay}s`;
+
+      snowContainer.appendChild(flake);
+    }
+  }
+});
+
+
+
+
+
 // for the skills, services and certificates
 // Show Skills
 document.getElementById('toolsBtn').addEventListener('click', function() {
@@ -178,24 +217,29 @@ document.getElementById('servicesBtn').addEventListener('click', function() {
 // STARS BACKGROUND SCRIPT ON EDUCATION SECTION
 document.addEventListener('DOMContentLoaded', () => {
   const starContainer = document.getElementById('stars');
-  const starCount = 200;
+  const starCount = 190;
 
   if (starContainer) {
     for (let i = 0; i < starCount; i++) {
       const star = document.createElement('div');
       star.className = 'star';
+      
       const size = Math.random() * 1 + 1;
       star.style.width = `${size}px`;
       star.style.height = `${size}px`;
       star.style.top = `${Math.random() * 100}%`;
       star.style.left = `${Math.random() * 100}%`;
+
+      // Add random animation delay and duration
+      const delay = Math.random() * 1.5;         // 0 to 1.5s
+      const duration = 1.5 + Math.random() * 0.5;       // 1.5s to 2s
+      star.style.animationDelay = `${delay}s`;
+      star.style.animationDuration = `${duration}s`;
+
       starContainer.appendChild(star);
     }
   }
 });
-
-
-
 
 
 
