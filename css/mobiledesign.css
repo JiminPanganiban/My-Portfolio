@@ -151,6 +151,8 @@
 
     .about-container {
         padding: 20px;
+        background: transparent;
+        box-shadow: none;
     }
 
     .about-title {
@@ -437,14 +439,22 @@
 
     /* FOOTER SECTION */
     .footer {
-        margin-left: 0 !important;
-        min-height: auto !important;
-        max-height: 80px;
+        font-size: 14px;
+        padding: 25px !important;
+        min-height: 20px !important;
         height: auto;
-        /* padding: 20px 15px; */
-        margin-top: 0 !important;
+    }
+
+    .footer .footer-icons {
+        margin-top: 8px;
+    }
+
+    .footer .footer-icons a {
+        font-size: 18px;
+        margin: 0 8px;
     }
 }
+
   
 
 

@@ -138,10 +138,11 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener('DOMContentLoaded', () => {
   const snowContainer = document.getElementById('snow');
   const aboutSection = document.getElementById('About');
+  const skillsSection = document.getElementById('Skills');
   const snowflakeCount = 100;
 
   // Only create snow if elements exist
-  if (snowContainer && aboutSection) {
+  if (snowContainer && aboutSection && skillsSection) {
     for (let i = 0; i < snowflakeCount; i++) {
       const flake = document.createElement('div');
       flake.className = 'snowflake';
