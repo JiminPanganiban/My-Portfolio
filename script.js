@@ -244,6 +244,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// Experience Section
+  const experienceBtn = document.getElementById("experienceBtn");
+  const certificatesBtn = document.getElementById("certificatesBtn");
+  const workContent = document.getElementById("workExperienceContent");
+  const certContent = document.getElementById("certificatesContent");
+
+  experienceBtn.addEventListener("click", () => {
+    // Button active state
+    experienceBtn.classList.add("active");
+    certificatesBtn.classList.remove("active");
+
+    // Fade out certificates
+    certContent.classList.remove("fade-in");
+    certContent.classList.add("fade-out");
+
+    // Fade in work experience after a delay
+    setTimeout(() => {
+      certContent.style.display = "none";
+      workContent.style.display = "grid"; // use grid to center items
+      workContent.classList.remove("fade-out");
+      workContent.classList.add("fade-in");
+    }, 200);
+  });
+
+  certificatesBtn.addEventListener("click", () => {
+    // Button active state
+    certificatesBtn.classList.add("active");
+    experienceBtn.classList.remove("active");
+
+    // Fade out work experience
+    workContent.classList.remove("fade-in");
+    workContent.classList.add("fade-out");
+
+    // Fade in certificates after a delay
+    setTimeout(() => {
+      workContent.style.display = "none";
+      certContent.style.display = "grid"; // use grid here too for centering
+      certContent.classList.remove("fade-out");
+      certContent.classList.add("fade-in");
+    }, 200);
+  });
+
+
+
+
+
 
 
 // Form submission handling in Contacts

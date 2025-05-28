@@ -1017,6 +1017,104 @@ section.shift {
 
 
 
+/* EXPERIENCE SECTION */
+/* EXPERIENCE SECTION */
+#Experience {
+  background: #020b16;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.experience-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* Shared container style */
+.experience-content {
+  display: grid;
+  gap: 1.5rem;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* Work Experience Card */
+.experience-card {
+  background: #111927;
+  place-items: center;
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 119, 255, 0.4);
+}
+
+.experience-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-card p {
+  margin: 0.3rem 0;
+}
+
+/* Certificate Card */
+.certificate-card {
+  background: #111927;
+  padding: 1rem;
+  border-radius: 15px;
+  max-width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 119, 255, 0.4);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.certificate-card a {
+  display: inline-block;
+  margin: 0.5rem 0;
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.certificate-card a:hover {
+  color: #0077ff;
+}
+
+
+
+
+
 /* PROJECTS SECTION */
 #Projects {
   background: #0f172a;
