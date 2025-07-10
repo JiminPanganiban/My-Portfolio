@@ -1018,7 +1018,6 @@ section.shift {
 
 
 /* EXPERIENCE SECTION */
-/* EXPERIENCE SECTION */
 #Experience {
   background: #020b16;
   color: white;
@@ -1085,6 +1084,7 @@ section.shift {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
+  display: inline;
 }
 
 .certificate-card:hover {
