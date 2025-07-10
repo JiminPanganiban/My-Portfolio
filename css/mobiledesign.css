@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (max-width: 1064px) {
     .menu {
         width: 250px !important;
         height: 100vh !important;
@@ -500,7 +500,6 @@
 
     .picture-flip-card {
         width: 90%;
-        height: 400px;
     }
 
     .picture-flip-card-front img,
