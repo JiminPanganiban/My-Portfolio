@@ -1075,7 +1075,8 @@ section.shift {
 }
 
 .experience-details p {
-  margin: 0 !important;
+  margin-top: 10px !important;
+  margin: 0;
   font-size: 0.95rem;
   color: #dddddd;
 }
